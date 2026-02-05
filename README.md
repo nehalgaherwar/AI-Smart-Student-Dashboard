@@ -60,3 +60,9 @@ Smart-Student-Dashboard/
 ```
 
 ---
+
+🔑 Login Credentials (Demo)
+Username: admin
+Password: 1234
+
+----
