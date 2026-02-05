@@ -66,3 +66,35 @@ Username: admin
 Password: 1234
 
 ----
+
+⚙️ How to Run Locally
+
+Clone or download this repository
+
+Open the folder
+
+Double-click index.html
+
+Login and enjoy 🔥
+
+---
+
+----
+
+# 💡 Future Enhancements
+
+📄 Export result as PDF
+
+🏆 Leaderboard system
+
+🤖 AI performance recommendations
+
+🌐 Backend integration (Node / Firebase)
+
+---
+
+# 👨‍💻 Author
+
+Nehal Gaherwar
+🎓 B.Tech Information Technology
+💻 Frontend Developer
