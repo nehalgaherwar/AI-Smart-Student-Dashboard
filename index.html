@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AI Smart Student Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<title>KHATRNAAK Student Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-<div class="toggle">
-    <button id="themeBtn">🌙 Dark Mode</button>
+<div id="loginBox" class="login">
+  <h2>🔐 Login</h2>
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p class="hint">demo: admin / 1234</p>
 </div>
 
-<div class="container">
-    <h1>🎓 Smart Student Dashboard</h1>
+<div id="dashboard" class="hidden">
+  <div class="toggle">
+    <button id="themeBtn">🌙 Dark Mode</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="container">
+    <h1>🔥 Smart Student Dashboard</h1>
     <p id="clock"></p>
 
     <div class="card">
-        <h2>👤 Student Generator</h2>
-        <button onclick="generateStudent()">Generate Student</button>
-        <p id="student"></p>
+      <h2>👤 Student Generator</h2>
+      <button onclick="generateStudent()">Generate</button>
+      <p id="student"></p>
+      <p id="grade"></p>
     </div>
 
     <div class="card">
-        <h2>📊 Marks Analysis</h2>
-        <canvas id="marksChart"></canvas>
+      <h2>📊 Marks (Bar)</h2>
+      <canvas id="barChart"></canvas>
     </div>
 
     <div class="card">
-        <h2>🏆 Result</h2>
-        <p id="grade"></p>
+      <h2>🧠 Performance Radar</h2>
+      <canvas id="radarChart"></canvas>
     </div>
+
+    <div class="card">
+      <h2>📅 Attendance</h2>
+      <button onclick="mark('P')">Present</button>
+      <button onclick="mark('A')">Absent</button>
+      <p id="attendance"></p>
+    </div>
+  </div>
 </div>
+
+<div id="toast"></div>
 
 <script src="script.js"></script>
 </body>
 </html>
+
