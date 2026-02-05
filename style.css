@@ -1,66 +1,35 @@
-:root {
-    --bg: #f4f6fb;
-    --text: #111;
-    --card: rgba(255,255,255,0.6);
+:root{
+--bg:#f4f6fb;--text:#111;--card:rgba(255,255,255,.6)
 }
-
-body.dark {
-    --bg: #0f172a;
-    --text: #f8fafc;
-    --card: rgba(30,41,59,0.6);
+body.dark{
+--bg:#020617;--text:#f8fafc;--card:rgba(30,41,59,.6)
 }
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    transition: 0.3s;
+body{
+margin:0;font-family:Segoe UI;background:var(--bg);color:var(--text);
+transition:.3s
 }
-
-.toggle {
-    text-align: right;
-    padding: 10px 20px;
+.hidden{display:none}
+button{
+padding:10px 14px;border:none;border-radius:8px;
+background:#6366f1;color:#fff;font-weight:700;cursor:pointer
 }
-
-button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: #6366f1;
-    color: white;
-    font-weight: bold;
+.container{max-width:900px;margin:auto;padding:20px}
+.card{
+background:var(--card);backdrop-filter:blur(12px);
+padding:20px;border-radius:18px;margin-bottom:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+animation:pop .6s ease
 }
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+@keyframes pop{from{transform:scale(.9);opacity:0}to{opacity:1}}
+.login{
+max-width:300px;margin:120px auto;padding:30px;
+background:#111;color:#fff;border-radius:16px;text-align:center
 }
-
-h1 {
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-#clock {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.card {
-    background: var(--card);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    animation: fadeUp 0.7s ease;
-}
-
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+.login input{width:90%;padding:10px;margin:8px 0;border-radius:6px;border:none}
+.hint{font-size:12px;opacity:.7}
+.toggle{text-align:right;padding:10px}
+#toast{
+position:fixed;bottom:30px;right:30px;
+background:#16a34a;color:#fff;padding:12px 18px;
+border-radius:10px;opacity:0;transition:.4s
 }
