@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Smart Student Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="toggle">
+    <button id="themeBtn">🌙 Dark Mode</button>
+</div>
+
+<div class="container">
+    <h1>🎓 Smart Student Dashboard</h1>
+    <p id="clock"></p>
+
+    <div class="card">
+        <h2>👤 Student Generator</h2>
+        <button onclick="generateStudent()">Generate Student</button>
+        <p id="student"></p>
+    </div>
+
+    <div class="card">
+        <h2>📊 Marks Analysis</h2>
+        <canvas id="marksChart"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>🏆 Result</h2>
+        <p id="grade"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
